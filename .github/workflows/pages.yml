@@ -48,6 +48,9 @@ jobs:
         with:
           name: build
 
+      - name: ls (testing)
+        run: ls -la
+
       - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
