@@ -1,21 +1,49 @@
 name: Build and Deploy
 on: [push]
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+  build:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: 🛎️ Checkout
         uses: actions/checkout@v3
 
       - name: 🔧 Install
         run: yarn install
 
-      - name: 🏷️ ESLint check
-        run: yarn lint
-
       - name: 🧱 Build
         run: yarn build
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: out/
+
+  test:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v3
+
+      - name: 🔧 Install
+        run: yarn install
+
+      - name: 🏷️ Lint
+        run: yarn lint
+
+      - name: 🎨 Format
+        run: yarn format
+  deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v3
+
+      - name: 📦 Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build
 
       - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
