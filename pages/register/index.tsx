@@ -4,18 +4,19 @@ import Head from "next/head";
 import { Login } from "../../stories/components/login/Login";
 import styles from "../../styles/LoginPage.module.css";
 
-const LoginPage: NextPage = () => {
+const RegisterPage: NextPage = () => {
   const [current, setCurrent] = useState(true);
   return (
     <div className={styles.container}>
       <Head>
-        <title>MyClimate Map | Login</title>
+        <title>MyClimate Map | Register</title>
         <meta name="description" content="MyClimate Map" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Login
+        toggled
         onSwitch={() => {
-          history.pushState(null, "", current ? "register" : "login");
+          history.pushState(null, "", current ? "login" : "register");
           setCurrent((prev) => !prev);
         }}
       ></Login>
@@ -23,4 +24,4 @@ const LoginPage: NextPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

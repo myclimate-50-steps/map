@@ -5,12 +5,14 @@ import styles from "./Login.module.css";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface LoginProps {
   toggled?: boolean;
+  onSwitch?: () => void;
 }
 
-export const Login = ({ toggled = false }: LoginProps) => {
+export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
   const [currentToggled, setToggled] = useState(toggled);
   const toggleSignup = () => {
     setToggled((prev) => !prev);
+    onSwitch && onSwitch();
   };
   return (
     <div
