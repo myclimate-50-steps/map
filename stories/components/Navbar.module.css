@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
+
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 100%;
+  background: linear-gradient(to bottom, #000 -10%, transparent 100%);
+  font-weight: 300;
+}
+
+.nav,
+.navbar {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.nav a,
+.navbar a {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px black;
+  text-decoration: none;
+}
+
+.nav .navItem,
+.navbar .navItem {
+  padding: 5px 0;
+}
+
+.nav .navItem:after,
+.navbar .navItem:after {
+  content: "\00a0";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  top: 3px;
+  background: transparent;
+  transition: top 0.3s ease-out;
+  -webkit-transition: top 0.3s ease-out;
+}
+
+.nav .navItem:hover:after,
+.navbar .navItem:hover:after {
+  top: 7px;
+  background: #3c3c3c;
+}
+
+.active:after {
+  height: 2px !important;
+  background: #cbb87f !important;
+}
