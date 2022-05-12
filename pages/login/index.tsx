@@ -9,7 +9,7 @@ const LoginPage: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>MyClimate Map | {current ? "Register" : "Login"}</title>
+        <title>MyClimate Map | {current ? "Login" : "Register"}</title>
         <meta name="description" content="MyClimate Map" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
