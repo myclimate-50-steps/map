@@ -10,7 +10,7 @@ interface LoginProps {
 
 export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
   const [currentToggled, setToggled] = useState(toggled);
-  const toggleSignup = () => {
+  const toggleSignup = (): void => {
     setToggled((prev) => !prev);
     onSwitch && onSwitch();
   };
