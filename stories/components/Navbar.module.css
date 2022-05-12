@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
 
-.navbar-container {
+.navbarContainer {
   position: fixed;
   top: 0;
   left: 50%;
@@ -38,13 +38,13 @@
   text-decoration: none;
 }
 
-.nav .nav-item,
-.navbar .nav-item {
+.nav .navItem,
+.navbar .navItem {
   padding: 5px 0;
 }
 
-.nav .nav-item:after,
-.navbar .nav-item:after {
+.nav .navItem:after,
+.navbar .navItem:after {
   content: "\00a0";
   display: block;
   height: 1px;
@@ -56,8 +56,8 @@
   -webkit-transition: top 0.3s ease-out;
 }
 
-.nav .nav-item:hover:after,
-.navbar .nav-item:hover:after {
+.nav .navItem:hover:after,
+.navbar .navItem:hover:after {
   top: 7px;
   background: #3c3c3c;
 }
