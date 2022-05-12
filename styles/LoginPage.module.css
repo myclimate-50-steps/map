@@ -7,3 +7,15 @@
   min-height: 100vh;
   position: relative;
 }
+
+@media screen and (min-width: 960px) {
+  .mediaMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .media {
+    display: none;
+  }
+}
