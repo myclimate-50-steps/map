@@ -1,0 +1,9 @@
+.container {
+  background-image: url("../pages/assets/login.background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: table;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
