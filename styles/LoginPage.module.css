@@ -1,0 +1,21 @@
+.container {
+  background-image: url("../pages/assets/login.background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: table;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media screen and (min-width: 960px) {
+  .mediaMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .media {
+    display: none;
+  }
+}
