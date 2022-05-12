@@ -1,12 +1,5 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-input,
-button {
+.input,
+.button {
   border: none;
   outline: none;
   background: none;
@@ -20,8 +13,7 @@ button {
   overflow: hidden;
   position: relative;
   width: 900px;
-  height: 550px;
-  margin: 0 auto 100px;
+  height: 465px;
   background: #fff;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   border-radius: 1.4rem;
@@ -33,7 +25,7 @@ button {
   transition: transform 1.2s ease-in-out;
   padding: 50px 30px 0;
 }
-.sub-cont {
+.subCont {
   overflow: hidden;
   position: absolute;
   left: 640px;
@@ -44,10 +36,10 @@ button {
   background: #fff;
   transition: transform 1.2s ease-in-out;
 }
-.cont.s--signup .sub-cont {
+.cont.sSignup .subCont {
   transform: translate3d(-640px, 0, 0);
 }
-button {
+.button {
   display: block;
   margin: 0 auto;
   width: 260px;
@@ -74,7 +66,7 @@ button {
   top: 0;
   width: 900px;
   height: 100%;
-  background-image: url("assets/login.background-blur.jpg");
+  background-image: url("../login/assets/login.background-blur.jpg");
   background-size: cover;
   transition: transform 1.2s ease-in-out;
 }
@@ -87,38 +79,37 @@ button {
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
-.cont.s--signup .img:before {
+.cont.sSignup .img:before {
   transform: translate3d(640px, 0, 0);
 }
-.img__text {
+.imgText {
   z-index: 2;
   position: absolute;
   left: 0;
   top: 50px;
-  width: 100%;
   padding: 0 20px;
   text-align: center;
   color: #fff;
   transition: transform 1.2s ease-in-out;
 }
-.img__text h2 {
+.imgText h2 {
   margin-bottom: 10px;
   font-weight: normal;
 }
-.img__text p {
+.imgText p {
   font-size: 14px;
   line-height: 1.5;
 }
-.cont.s--signup .img__text.m--up {
+.cont.sSignup .imgText.mUp {
   transform: translateX(520px);
 }
-.img__text.m--in {
+.imgText.mIn {
   transform: translateX(-520px);
 }
-.cont.s--signup .img__text.m--in {
+.cont.sSignup .imgText.mIn {
   transform: translateX(0);
 }
-.img__btn {
+.imgBtn {
   overflow: hidden;
   z-index: 2;
   position: relative;
@@ -131,18 +122,18 @@ button {
   font-size: 15px;
   cursor: pointer;
 }
-.img__btn:after {
+.imgBtn:after {
   content: "";
   z-index: 2;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 97%;
+  height: 89%;
   border: 2px solid #fff;
   border-radius: 30px;
 }
-.img__btn span {
+.imgBtn span {
   position: absolute;
   left: 0;
   top: 0;
@@ -153,32 +144,32 @@ button {
   height: 100%;
   transition: transform 1.2s;
 }
-.img__btn span.m--in {
+.imgBtn span.mIn {
   transform: translateY(-72px);
 }
-.cont.s--signup .img__btn span.m--in {
+.cont.sSignup .imgBtn span.mIn {
   transform: translateY(0);
 }
-.cont.s--signup .img__btn span.m--up {
+.cont.sSignup .imgBtn span.mUp {
   transform: translateY(72px);
 }
-h2 {
+.title {
   width: 100%;
   font-size: 26px;
   text-align: center;
 }
-label {
+.label {
   display: block;
   width: 260px;
   margin: 25px auto 0;
   text-align: center;
 }
-label span {
+.label span {
   font-size: 12px;
   color: #cfcfcf;
   text-transform: uppercase;
 }
-input {
+.input {
   display: block;
   width: 100%;
   margin-top: 5px;
@@ -187,7 +178,7 @@ input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   text-align: center;
 }
-.forgot-pass {
+.forgotPass {
   margin-top: 15px;
   text-align: center;
   font-size: 12px;
@@ -199,39 +190,39 @@ input {
   background: #3c4d1d;
   text-transform: uppercase;
 }
-.fb-btn {
+.fbBtn {
   border: 2px solid #d3dae9;
   color: #8fa1c7;
 }
-.fb-btn span {
+.fbBtn span {
   font-weight: bold;
   color: #455a81;
 }
-.sign-in {
+.signIn {
   transition-timing-function: ease-out;
 }
-.cont.s--signup .sign-in {
+.cont.sSignup .signIn {
   transition-timing-function: ease-in-out;
   transition-duration: 1.2s;
   transform: translate3d(640px, 0, 0);
 }
-.sign-up {
+.signUp {
   transform: translate3d(-900px, 0, 0);
 }
-.cont.s--signup .sign-up {
+.cont.sSignup .signUp {
   transform: translate3d(0, 0, 0);
 }
-.icon-link {
+.iconLink {
   position: absolute;
   left: 5px;
   bottom: 5px;
   width: 32px;
 }
-.icon-link img {
+.iconLink img {
   width: 100%;
   vertical-align: top;
 }
-.icon-link--twitter {
+.iconLink--twitter {
   left: auto;
   right: 5px;
 }
