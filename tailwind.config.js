@@ -1,8 +1,7 @@
 module.exports = {
-  purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+  content: [],
   theme: {
     extend: {},
   },
-  variants: {},
-  plugins: ["tailwindcss", "postcss-preset-env"],
+  plugins: [],
 };
