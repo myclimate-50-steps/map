@@ -14,4 +14,6 @@ export default {
 const Template: ComponentStory<typeof Login> = (args) => <Login {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  toggled: false,
+};
