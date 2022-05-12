@@ -70,7 +70,7 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
           <button type="button" className={`${styles.submit} ${styles.button}`}>
             Registrieren
           </button>
-          <button type="button" className={`${styles.fbBtn}, ${styles.button}`}>
+          <button type="button" className={`${styles.fbBtn} ${styles.button}`}>
             Mit <span>Google</span> verbinden
           </button>
         </div>
