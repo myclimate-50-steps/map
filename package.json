@@ -39,6 +39,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-storybook": "^0.5.11",
+    "firebase": "^9.8.1",
     "postcss": "^8.4.13",
     "postcss-preset-env": "^7.5.0",
     "style-loader": "^3.3.1",
