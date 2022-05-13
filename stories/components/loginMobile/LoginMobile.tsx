@@ -2,6 +2,13 @@
 import React, { useState } from "react";
 import styles from "./LoginMobile.module.css";
 
+import { auth, provider } from "../../../firebase/clientApp";
+import {
+  signInWithRedirect,
+  setPersistence,
+  browserLocalPersistence,
+} from "firebase/auth";
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface LoginMobileProps {
   toggled?: boolean;
@@ -16,6 +23,11 @@ export const LoginMobile = ({
   const toggleSignup = (): void => {
     setToggled((prev) => !prev);
     onSwitch && onSwitch();
+  };
+  const loginGoogle = (): void => {
+    signInWithRedirect(auth, provider).then(() => {
+      setPersistence(auth, browserLocalPersistence);
+    });
   };
   return (
     <div className={styles.container}>
@@ -70,8 +82,12 @@ export const LoginMobile = ({
                 />
               </div>
               <div className={styles.group}>
-                <button type="submit" className={styles.fbBtn}>
-                  Mit <span>Google</span> einloggen
+                <button
+                  type="submit"
+                  onClick={loginGoogle}
+                  className={styles.fbBtn}
+                >
+                  Mit <span>Google</span> verbinden
                 </button>
               </div>
               <div className={styles.footLnk}>

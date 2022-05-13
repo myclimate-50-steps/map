@@ -2,6 +2,13 @@
 import React, { useState } from "react";
 import styles from "./Login.module.css";
 
+import { auth, provider } from "../../../firebase/clientApp";
+import {
+  signInWithRedirect,
+  setPersistence,
+  browserLocalPersistence,
+} from "firebase/auth";
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface LoginProps {
   toggled?: boolean;
@@ -13,6 +20,11 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
   const toggleSignup = (): void => {
     setToggled((prev) => !prev);
     onSwitch && onSwitch();
+  };
+  const loginGoogle = (): void => {
+    signInWithRedirect(auth, provider).then(() => {
+      setPersistence(auth, browserLocalPersistence);
+    });
   };
   return (
     <div
@@ -32,7 +44,11 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
         <button type="button" className={`${styles.submit} ${styles.button}`}>
           Einloggen
         </button>
-        <button type="button" className={`${styles.fbBtn} ${styles.button}`}>
+        <button
+          type="button"
+          onClick={loginGoogle}
+          className={`${styles.fbBtn} ${styles.button}`}
+        >
           Mit <span>Google</span> verbinden
         </button>
       </div>
@@ -70,7 +86,11 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
           <button type="button" className={`${styles.submit} ${styles.button}`}>
             Registrieren
           </button>
-          <button type="button" className={`${styles.fbBtn} ${styles.button}`}>
+          <button
+            type="button"
+            onClick={loginGoogle}
+            className={`${styles.fbBtn} ${styles.button}`}
+          >
             Mit <span>Google</span> verbinden
           </button>
         </div>
