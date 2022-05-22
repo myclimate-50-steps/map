@@ -4,6 +4,7 @@ import styles from "./StoryButton.module.css";
 interface StoryButtonProps {
   color: string;
   active?: boolean;
+  className?: string;
   text: string;
 }
 
@@ -11,10 +12,11 @@ export const StoryButton = ({
   color = "#000",
   active = false,
   text = "Lorem ipsum dolor sit amet.",
+  className = "",
 }: StoryButtonProps) => {
   const [isHovered, setHovered] = useState(false);
   return (
-    <div className="flex flex-col w-16">
+    <div className={`flex flex-col w-16${className ? " " + className : ""}`}>
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
