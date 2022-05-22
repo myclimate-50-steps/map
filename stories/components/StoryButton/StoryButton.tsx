@@ -6,6 +6,7 @@ interface StoryButtonProps {
   active?: boolean;
   className?: string;
   text: string;
+  onClick?: React.MouseEventHandler;
 }
 
 export const StoryButton = ({
@@ -13,10 +14,14 @@ export const StoryButton = ({
   active = false,
   text = "Lorem ipsum dolor sit amet.",
   className = "",
+  onClick,
 }: StoryButtonProps) => {
   const [isHovered, setHovered] = useState(false);
   return (
-    <div className={`flex flex-col w-16${className ? " " + className : ""}`}>
+    <div
+      onClick={onClick}
+      className={`flex flex-col w-16${className ? " " + className : ""}`}
+    >
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
