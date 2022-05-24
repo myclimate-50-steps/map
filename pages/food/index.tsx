@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 
-import { auth } from "../firebase/clientApp";
+import { auth } from "../../firebase/clientApp";
 import { useRouter } from "next/router";
 import { browserLocalPersistence, setPersistence } from "firebase/auth";
-import { StoryButton } from "../stories/components/StoryButton/StoryButton";
-import { Navbar } from "../stories/components/navbar/Navbar";
+import { StoryButton } from "../../stories/components/StoryButton/StoryButton";
+import { Navbar } from "../../stories/components/navbar/Navbar";
+
+import steps from "../steps.json";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -34,59 +36,76 @@ const Home: NextPage = () => {
         <div className="flex justify-center col-start-3">
           <StoryButton
             className="transition-transform hover:scale-125"
-            color="#698E0F"
-            text="Elekronik"
-            onClick={(): void => {
-              router.push("/electricity");
-            }}
+            color="#76427A"
+            text={steps.categories.food[0].title}
           ></StoryButton>
         </div>
-        <div className="flex justify-center col-span-5 h-[68px]"></div>
-        <div className="flex justify-center col-start-1">
-          <StoryButton
-            className="transition-transform hover:scale-125"
-            color="#4F7EBA"
-            text="Haushalt"
-            onClick={(): void => {
-              router.push("/household");
-            }}
-          ></StoryButton>
-        </div>
-        <div className="flex justify-center col-start-5">
-          <StoryButton
-            className="transition-transform hover:scale-125"
-            color="#37C166"
-            text="Kleidung"
-            onClick={(): void => {
-              router.push("/clothing");
-            }}
-          ></StoryButton>
-        </div>
-        <h1 className="col-start-2 col-span-3 text-center text-6xl transition-transform hover:scale-125 cursor-default">
-          Klimaneutral
-        </h1>
-        <div className="flex justify-center col-span-5 h-[68px]"></div>
         <div className="flex justify-center col-start-2">
           <StoryButton
             className="transition-transform hover:scale-125"
-            color="#B93C0D"
-            text="Mobilität"
-            onClick={(): void => {
-              router.push("/mobility");
-            }}
+            color="#76427A"
+            text={steps.categories.food[1].title}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-4">
           <StoryButton
             className="transition-transform hover:scale-125"
             color="#76427A"
-            text="Ernährung"
-            onClick={(): void => {
-              router.push("/food");
-            }}
+            text={steps.categories.food[2].title}
           ></StoryButton>
         </div>
-        <div className="flex justify-center col-span-5 h-[68px]"></div>
+        <div className="flex justify-center col-start-1">
+          <StoryButton
+            className="transition-transform hover:scale-125"
+            color="#76427A"
+            text={steps.categories.food[3].title}
+          ></StoryButton>
+        </div>
+        <div className="flex justify-center col-start-5">
+          <StoryButton
+            className="transition-transform hover:scale-125"
+            color="#76427A"
+            text={steps.categories.food[4].title}
+          ></StoryButton>
+        </div>
+        <h1 className="col-start-2 col-span-3 text-center text-6xl transition-transform hover:scale-125 cursor-default">
+          Ernährung
+        </h1>
+        <div className="flex justify-center col-start-1">
+          <StoryButton
+            className="transition-transform hover:scale-125"
+            color="#76427A"
+            text={steps.categories.food[5].title}
+          ></StoryButton>
+        </div>
+        <div className="flex justify-center col-start-5">
+          <StoryButton
+            className="transition-transform hover:scale-125"
+            color="#76427A"
+            text={steps.categories.food[6].title}
+          ></StoryButton>
+        </div>
+        <div className="flex justify-center col-start-2">
+          <StoryButton
+            className="transition-transform hover:scale-125"
+            color="#76427A"
+            text={steps.categories.food[7].title}
+          ></StoryButton>
+        </div>
+        <div className="flex justify-center col-start-4">
+          <StoryButton
+            className="transition-transform hover:scale-125"
+            color="#76427A"
+            text={steps.categories.food[8].title}
+          ></StoryButton>
+        </div>
+        <div className="flex justify-center col-start-3">
+          <StoryButton
+            className="transition-transform hover:scale-125"
+            color="#76427A"
+            text={steps.categories.food[9].title}
+          ></StoryButton>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,64 @@
+{
+  "categories": {
+    "electricity": [
+      { "title": "Schritt 1", "description": "hey brother" },
+      { "title": "Schritt 2", "description": "hey brother" },
+      { "title": "Schritt 3", "description": "hey brother" },
+      { "title": "Schritt 4", "description": "hey brother" },
+      { "title": "Schritt 5", "description": "hey brother" },
+      { "title": "Schritt 6", "description": "hey brother" },
+      { "title": "Schritt 7", "description": "hey brother" },
+      { "title": "Schritt 8", "description": "hey brother" },
+      { "title": "Schritt 9", "description": "hey brother" },
+      { "title": "Schritt 10", "description": "hey brother" }
+    ],
+    "household": [
+      { "title": "Schritt 1", "description": "hey brother" },
+      { "title": "Schritt 2", "description": "hey brother" },
+      { "title": "Schritt 3", "description": "hey brother" },
+      { "title": "Schritt 4", "description": "hey brother" },
+      { "title": "Schritt 5", "description": "hey brother" },
+      { "title": "Schritt 6", "description": "hey brother" },
+      { "title": "Schritt 7", "description": "hey brother" },
+      { "title": "Schritt 8", "description": "hey brother" },
+      { "title": "Schritt 9", "description": "hey brother" },
+      { "title": "Schritt 10", "description": "hey brother" }
+    ],
+    "clothing": [
+      { "title": "Schritt 1", "description": "hey brother" },
+      { "title": "Schritt 2", "description": "hey brother" },
+      { "title": "Schritt 3", "description": "hey brother" },
+      { "title": "Schritt 4", "description": "hey brother" },
+      { "title": "Schritt 5", "description": "hey brother" },
+      { "title": "Schritt 6", "description": "hey brother" },
+      { "title": "Schritt 7", "description": "hey brother" },
+      { "title": "Schritt 8", "description": "hey brother" },
+      { "title": "Schritt 9", "description": "hey brother" },
+      { "title": "Schritt 10", "description": "hey brother" }
+    ],
+    "mobility": [
+      { "title": "Schritt 1", "description": "hey brother" },
+      { "title": "Schritt 2", "description": "hey brother" },
+      { "title": "Schritt 3", "description": "hey brother" },
+      { "title": "Schritt 4", "description": "hey brother" },
+      { "title": "Schritt 5", "description": "hey brother" },
+      { "title": "Schritt 6", "description": "hey brother" },
+      { "title": "Schritt 7", "description": "hey brother" },
+      { "title": "Schritt 8", "description": "hey brother" },
+      { "title": "Schritt 9", "description": "hey brother" },
+      { "title": "Schritt 10", "description": "hey brother" }
+    ],
+    "food": [
+      { "title": "Schritt 1", "description": "hey brother" },
+      { "title": "Schritt 2", "description": "hey brother" },
+      { "title": "Schritt 3", "description": "hey brother" },
+      { "title": "Schritt 4", "description": "hey brother" },
+      { "title": "Schritt 5", "description": "hey brother" },
+      { "title": "Schritt 6", "description": "hey brother" },
+      { "title": "Schritt 7", "description": "hey brother" },
+      { "title": "Schritt 8", "description": "hey brother" },
+      { "title": "Schritt 9", "description": "hey brother" },
+      { "title": "Schritt 10", "description": "hey brother" }
+    ]
+  }
+}
