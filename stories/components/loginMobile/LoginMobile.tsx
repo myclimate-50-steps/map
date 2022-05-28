@@ -7,6 +7,9 @@ import {
   signInWithRedirect,
   setPersistence,
   browserLocalPersistence,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
 } from "firebase/auth";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -20,6 +23,9 @@ export const LoginMobile = ({
   onSwitch,
 }: LoginMobileProps) => {
   const [currentToggled, setToggled] = useState(toggled);
+  const [getEmail, setEmail] = useState(String);
+  const [getPassword, setPassword] = useState(String);
+  const [getPasswordConfirm, setPasswordConfirm] = useState(String);
   const toggleSignup = (): void => {
     setToggled((prev) => !prev);
     onSwitch && onSwitch();
@@ -28,6 +34,33 @@ export const LoginMobile = ({
     signInWithRedirect(auth, provider).then(() => {
       setPersistence(auth, browserLocalPersistence);
     });
+  };
+  const forgotPassword = (): void => {
+    sendPasswordResetEmail(auth, getEmail)
+      .then((): void => {
+        alert("Password reset sent.");
+      })
+      .catch((error): void => {
+        alert(error.message);
+      });
+  };
+  const loginPassword = (): void => {
+    signInWithEmailAndPassword(auth, getEmail, getPassword)
+      .then((): void => {
+        setPersistence(auth, browserLocalPersistence);
+      })
+      .catch((error): void => {
+        alert(error.message);
+      });
+  };
+  const registerPassword = (): void => {
+    createUserWithEmailAndPassword(auth, getEmail, getPassword)
+      .then((): void => {
+        setPersistence(auth, browserLocalPersistence);
+      })
+      .catch((error): void => {
+        alert(error.message);
+      });
   };
   return (
     <div className={styles.container}>
@@ -61,7 +94,15 @@ export const LoginMobile = ({
                 <label htmlFor="email" className={styles.label}>
                   E-Mail
                 </label>
-                <input id="email" type="email" className={styles.input} />
+                <input
+                  id="email"
+                  type="email"
+                  value={getEmail}
+                  onChange={(event): void => {
+                    setEmail(event.currentTarget.value);
+                  }}
+                  className={styles.input}
+                />
               </div>
               <div className={styles.group}>
                 <label htmlFor="pass" className={styles.label}>
@@ -72,6 +113,10 @@ export const LoginMobile = ({
                   type="password"
                   className={styles.input}
                   data-type="password"
+                  value={getPassword}
+                  onChange={(event): void => {
+                    setPassword(event.target.value);
+                  }}
                 />
               </div>
               <div className={styles.group}>
@@ -79,6 +124,7 @@ export const LoginMobile = ({
                   type="submit"
                   className={styles.button}
                   value="Einloggen"
+                  onClick={loginPassword}
                 />
               </div>
               <div className={styles.group}>
@@ -91,7 +137,9 @@ export const LoginMobile = ({
                 </button>
               </div>
               <div className={styles.footLnk}>
-                <a id="forgot">Passwort vergessen?</a>
+                <a onClick={forgotPassword} id="forgot">
+                  Passwort vergessen?
+                </a>
               </div>
             </div>
             <div className={styles.signUpHtm}>
@@ -99,7 +147,15 @@ export const LoginMobile = ({
                 <label htmlFor="email" className={styles.label}>
                   E-Mail
                 </label>
-                <input id="email" type="email" className={styles.input} />
+                <input
+                  id="email"
+                  type="email"
+                  className={styles.input}
+                  value={getEmail}
+                  onChange={(event): void => {
+                    setEmail(event.currentTarget.value);
+                  }}
+                />
               </div>
               <div className={styles.group}>
                 <label htmlFor="pass" className={styles.label}>
@@ -110,6 +166,10 @@ export const LoginMobile = ({
                   type="password"
                   className={styles.input}
                   data-type="password"
+                  value={getPassword}
+                  onChange={(event): void => {
+                    setPassword(event.target.value);
+                  }}
                 />
               </div>
               <div className={styles.group}>
@@ -121,6 +181,10 @@ export const LoginMobile = ({
                   type="password"
                   className={styles.input}
                   data-type="password"
+                  value={getPasswordConfirm}
+                  onChange={(event): void => {
+                    setPasswordConfirm(event.target.value);
+                  }}
                 />
               </div>
               <div className={styles.group}>
@@ -128,6 +192,7 @@ export const LoginMobile = ({
                   type="submit"
                   className={styles.button}
                   value="Registrieren"
+                  onClick={registerPassword}
                 />
               </div>
             </div>

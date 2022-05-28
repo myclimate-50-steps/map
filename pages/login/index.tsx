@@ -4,6 +4,9 @@ import Head from "next/head";
 import { Login } from "../../stories/components/login/Login";
 import styles from "../../styles/LoginPage.module.css";
 import { LoginMobile } from "../../stories/components/loginMobile/LoginMobile";
+import { auth } from "../../firebase/clientApp";
+import { browserLocalPersistence, setPersistence } from "firebase/auth";
+import router from "next/router";
 
 const LoginPage: NextPage = () => {
   const [current, setCurrent] = useState(true);
@@ -11,6 +14,13 @@ const LoginPage: NextPage = () => {
     history.pushState(null, "", current ? "register" : "login");
     setCurrent((prev) => !prev);
   };
+  React.useEffect((): void => {
+    setPersistence(auth, browserLocalPersistence).then((): void => {
+      if (auth.currentUser) {
+        router.push("/");
+      }
+    });
+  });
   return (
     <div className={styles.container}>
       <Head>
