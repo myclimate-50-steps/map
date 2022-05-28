@@ -13,6 +13,7 @@ import steps from "../steps.json";
 
 const Home: NextPage = () => {
   const [isHidden, setHidden] = useState(false);
+  const [currentActive, setActive] = useState(Number);
   const router = useRouter();
   React.useEffect((): void => {
     setPersistence(auth, browserLocalPersistence).then((): void => {
@@ -39,6 +40,18 @@ const Home: NextPage = () => {
       <Navbar></Navbar>
       <div
         className={`${
+          isHidden ? "" : "hidden "
+        }container max-w-2xl flex flex-col justify-center`}
+      >
+        <h1 className="text-6xl text-center mb-6">
+          {steps.categories.electricity[currentActive].title}
+        </h1>
+        <p className="text-lg text-center break-words">
+          {steps.categories.electricity[currentActive].description}
+        </p>
+      </div>
+      <div
+        className={`${
           isHidden ? "hidden " : ""
         }container max-w-2xl grid grid-cols-5 grid-rows-7 gap-9`}
       >
@@ -47,7 +60,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[0].title}
-            onClick={toggleStep}
+            onClick={(): void => {
+              toggleStep();
+              setActive(0);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-2">
@@ -55,6 +71,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[1].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(1);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-4">
@@ -62,6 +82,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[2].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(2);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-1">
@@ -69,6 +93,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[3].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(3);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-5">
@@ -76,6 +104,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[4].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(4);
+            }}
           ></StoryButton>
         </div>
         <h1 className="col-start-2 col-span-3 text-center text-6xl transition-transform hover:scale-125 cursor-default">
@@ -86,6 +118,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[5].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(5);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-5">
@@ -93,6 +129,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[6].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(6);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-2">
@@ -100,6 +140,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[7].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(7);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-4">
@@ -107,6 +151,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[8].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(8);
+            }}
           ></StoryButton>
         </div>
         <div className="flex justify-center col-start-3">
@@ -114,6 +162,10 @@ const Home: NextPage = () => {
             className="transition-transform hover:scale-125"
             color="#698E0F"
             text={steps.categories.electricity[9].title}
+            onClick={(): void => {
+              toggleStep();
+              setActive(9);
+            }}
           ></StoryButton>
         </div>
       </div>
