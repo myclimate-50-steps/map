@@ -19,13 +19,10 @@ export const Navbar = ({}: NavbarProps) => {
           <a href="https://myclimate-50-steps.github.io/map/">MAP</a>
         </li>
         <li className={styles.navItem}>
-          <a href="#">KONTO</a>
+          <a href="/map/login">KONTO</a>
         </li>
         <li className={styles.navItem}>
           <a href="/about/">ÜBER UNS</a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="#">KONTAKT</a>
         </li>
       </ul>
     </nav>

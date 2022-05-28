@@ -7,6 +7,9 @@ import {
   signInWithRedirect,
   setPersistence,
   browserLocalPersistence,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -17,6 +20,9 @@ interface LoginProps {
 
 export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
   const [currentToggled, setToggled] = useState(toggled);
+  const [getEmail, setEmail] = useState(String);
+  const [getPassword, setPassword] = useState(String);
+  const [getPasswordConfirm, setPasswordConfirm] = useState(String);
   const toggleSignup = (): void => {
     setToggled((prev) => !prev);
     onSwitch && onSwitch();
@@ -26,6 +32,33 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
       setPersistence(auth, browserLocalPersistence);
     });
   };
+  const forgotPassword = (): void => {
+    sendPasswordResetEmail(auth, getEmail)
+      .then((): void => {
+        alert("Password reset sent.");
+      })
+      .catch((error): void => {
+        alert(error.message);
+      });
+  };
+  const loginPassword = (): void => {
+    signInWithEmailAndPassword(auth, getEmail, getPassword)
+      .then((): void => {
+        setPersistence(auth, browserLocalPersistence);
+      })
+      .catch((error): void => {
+        alert(error.message);
+      });
+  };
+  const registerPassword = (): void => {
+    createUserWithEmailAndPassword(auth, getEmail, getPassword)
+      .then((): void => {
+        setPersistence(auth, browserLocalPersistence);
+      })
+      .catch((error): void => {
+        alert(error.message);
+      });
+  };
   return (
     <div
       className={`${styles.cont}${currentToggled ? " " + styles.sSignup : ""}`}
@@ -34,14 +67,30 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
         <h2 className={styles.title}>Willkommen zurück</h2>
         <label className={styles.label}>
           <span>Email</span>
-          <input type="email" className={styles.input} />
+          <input
+            value={getEmail}
+            onChange={(event): void => {
+              setEmail(event.currentTarget.value);
+            }}
+            type="email"
+            className={styles.input}
+          />
         </label>
         <label className={styles.label}>
           <span>Passwort</span>
           <input type="password" className={styles.input} />
         </label>
-        <p className={styles.forgotPass}>Passwort vergessen?</p>
-        <button type="button" className={`${styles.submit} ${styles.button}`}>
+        <p
+          onClick={forgotPassword}
+          className={`hover:cursor-pointer ${styles.forgotPass}`}
+        >
+          Passwort vergessen?
+        </p>
+        <button
+          onClick={loginPassword}
+          type="button"
+          className={`${styles.submit} ${styles.button}`}
+        >
           Einloggen
         </button>
         <button
@@ -77,13 +126,31 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
           </label>
           <label className={styles.label}>
             <span>Passwort</span>
-            <input type="password" className={styles.input} />
+            <input
+              value={getPassword}
+              onChange={(event): void => {
+                setPassword(event.target.value);
+              }}
+              type="password"
+              className={styles.input}
+            />
           </label>
           <label className={styles.label}>
             <span>Passwort bestätigen</span>
-            <input type="password" className={styles.input} />
+            <input
+              value={getPasswordConfirm}
+              onChange={(event): void => {
+                setPasswordConfirm(event.target.value);
+              }}
+              type="password"
+              className={styles.input}
+            />
           </label>
-          <button type="button" className={`${styles.submit} ${styles.button}`}>
+          <button
+            onClick={registerPassword}
+            type="button"
+            className={`${styles.submit} ${styles.button}`}
+          >
             Registrieren
           </button>
           <button
