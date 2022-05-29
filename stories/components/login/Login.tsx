@@ -83,7 +83,14 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
         </label>
         <label className={styles.label}>
           <span>Passwort</span>
-          <input type="password" className={styles.input} />
+          <input
+            value={getPassword}
+            onChange={(event): void => {
+              setPassword(event.target.value);
+            }}
+            type="password"
+            className={styles.input}
+          />
         </label>
         <p
           onClick={forgotPassword}
