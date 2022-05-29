@@ -2,208 +2,211 @@
   "categories": {
     "electricity": [
       {
-        "title": "Schritt 1",
+        "title": "LED Lampen",
         "description": "Benutze mehr LED: Hast du noch Lampen, die nicht mit LED laufen? Dann besorg dir doch LED Lampen, denn die sind viel sparsamer als übliche Lampen."
       },
       {
-        "title": "Schritt 2",
+        "title": "Neue Produkte",
         "description": "Kauf nicht immer das Neuste: Viele Produkte werden immer weiter produziert. Wenn wir immer wieder das neuste iPhone kaufen, unterstützen wir die Produktion, die durch unseren Kaufkonsum, sich negativ auf die Umwelt auswirkt."
       },
       {
-        "title": "Schritt 3",
+        "title": "Lichter ausschalten",
         "description": "Schalte dein Licht immer aus: Wer kennt es nicht? Man ist für eine kurze Zeit nicht Zuhause und schaltet das Licht nicht aus. Auch wenn man wenig Strom spart, ist es wichtig, seine Lichter auszuschalten, wenn man sie nicht braucht."
       },
       {
-        "title": "Schritt 4",
+        "title": "Akkus",
         "description": "Schone deine Akkus: Halte deinen Akku immer über 20%, unterbreche nicht den Ladezyklus und lade dein Handy immer auf über 80%. Denn: Lithium-Ionen Akkus werden erst dann umweltfreundlich, wenn man auch ihre Lebenserwartung ausreizt."
       },
       {
-        "title": "Schritt 5",
+        "title": "Lichter verwenden",
         "description": "Nutze nicht zu viele Lichter: Einfacher Schritt, aber auch wichtig!"
       },
       {
-        "title": "Schritt 6",
+        "title": "Second Hand",
         "description": "Kaufe Second Hand: Es gibt viele Dinge, die man wiederverwenden kann, aber nicht recyclen. Darum ist es sehr wichtig Second Hand zu kaufen (und auch zu verkaufen)."
       },
       {
-        "title": "Schritt 7",
+        "title": "Alte Geräte",
         "description": "Gib alte Geräte weiter: Du hast noch alte Geräte, die noch funktionieren, aber du brauchst sie nicht? Verkaufe sie, oder gebe sie an Bekannte, Familie und Freunde weiter."
       },
       {
-        "title": "Schritt 8",
+        "title": "Bring-in",
         "description": "Bring-in: Viele Firmen, wie z.B Apple, bieten Bring-In, auch wenn dein altes Gerät kaputt ist. In den meisten Fällen bekommst du auch Rabatt auf deinen nächsten Einkauf."
       },
       {
-        "title": "Schritt 9",
+        "title": "Ungebrauchte Geräte",
         "description": "Schalte deine ungebrauchten Geräte aus: Du brauchst gerade deinen Fernsehen nicht? Dann schalte ihn doch aus. Damit sparst du Strom, das ist besser für die Umwelt und für deine Stromrechung"
       },
       {
-        "title": "Schritt 10",
+        "title": "Reparatur",
         "description": "Reparier deine Geräte: Wenn etwas nicht ganz funktioniert, lass es doch lieber reparieren, anstatt direkt ein neues Zukaufen. Denn in den meisten Fällen funktionieren die Geräte noch wie neu."
       }
     ],
     "household": [
       {
-        "title": "Schritt 1",
+        "title": "Plastikverbrauch",
         "description": "Bleibe Plastikneutral: Nutze wenig/ bis gar keinen (Einweg-)Plastik mehr. Plastik hat einen sehr hohen CO2-Verbrauch."
       },
       {
-        "title": "Schritt 2",
+        "title": "Mülltrennung",
         "description": "Trenne deinen Müll richtig: Das ist wichtig, um deinen Müll richtig recyclen zu können."
       },
       {
-        "title": "Schritt 3",
+        "title": "Wäsche trocknen",
         "description": "Lufttrocknen: Trockne doch lieber deine Klamotten ohne Trocker. Somit sparst du auch viel Strom."
       },
       {
-        "title": "Schritt 4",
+        "title": "Heizen",
         "description": "Heizung: Stelle doch deine Heizung niedriger oder nutze, wenn das so möglich ist, keine."
       },
       {
-        "title": "Schritt 5",
+        "title": "Geschirr spülen",
         "description": "Küche: Du kannst auch Strom sparen, in dem du dein Geschirr von Hand spülst."
       },
       {
-        "title": "Schritt 6",
+        "title": "Nahrungsmittel",
         "description": "Iss alles: Kaufe nur so viel, wie du brauchst und nutze deine Nahrungsmittel auch!"
       },
       {
-        "title": "Schritt 7",
+        "title": "Abgelaufene Produkte",
         "description": "Abgelaufene Produkte: Die meisten Produkte haben nur ein Mindestablaufdatum. Das heisst nicht, dass sie abgelaufen sind (ausser bei Fisch/Fleisch), schaue doch selber nach, ob z.B die Milch noch gut schmeckt/riecht."
       },
       {
-        "title": "Schritt 8",
+        "title": "Abfall",
         "description": "Kompost: Nutze doch deinen Kompost, anstatt alles in einen Abfalleimer zu schmeissen."
       },
       {
-        "title": "Schritt 9",
+        "title": "Waschmaschine",
         "description": "Waschmaschine: Schalte nicht die Waschmaschine nur für ein paar Kleidungsstücke an, du kannst auch etwas warten, bis du noch andere Kleidungsstücke zu waschen hast."
       },
-      { "title": "Schritt 10", "description": "" }
+      {
+        "title": "Wasserverbrauch",
+        "description": "Wasserverbrauch: Versuche weniger Wasser zu verbrauchen, indem du z.B. kürzer duschst."
+      }
     ],
     "clothing": [
       {
-        "title": "Schritt 1",
-        "description": "Waschen: Wasche höchstens 40 Grad, um etwas Sport zu sparen."
+        "title": "Waschen",
+        "description": "Waschen: Wasche höchstens 40 Grad, um etwas Strom zu sparen."
       },
       {
-        "title": "Schritt 2",
+        "title": "Recycling",
         "description": "Recycling: Kaufe recyclete Kleidung."
       },
       {
-        "title": "Schritt 3",
+        "title": "Second Hand",
         "description": "Second Hand: Kaufe Second Hand Kleidung."
       },
       {
-        "title": "Schritt 4",
+        "title": "Kaufkonsum",
         "description": "Kaufkonsum: Kaufe nicht unnötig neue Kleidung, denn deine Kleidung kannst du sicher noch benutzen."
       },
       {
-        "title": "Schritt 5",
+        "title": "Reparatur",
         "description": "Nähen bei kaputter Kleidung: Falls du Löcher in der Jeans hast, lass sie doch zusammennähen."
       },
       {
-        "title": "Schritt 6",
+        "title": "Nachhaltiges Material",
         "description": "Material: Achte auf dein Material, und nutze umweltfreundliches Material, das nicht von Tieren etc. stammt."
       },
       {
-        "title": "Schritt 7",
+        "title": "Reusing",
         "description": "Reusing: Gebe alte Kleider weiter, falls du diese nicht mehr "
       },
       {
-        "title": "Schritt 8",
+        "title": "Kleiderschrank",
         "description": "Behalte deinen Schrank im Überblick: Sobald du nicht mehr weisst, welche Kleidungsstücke du noch hast, hast du bereits zu viel im Kleiderschrank."
       },
       {
-        "title": "Schritt 9",
+        "title": "Kaufkonsum",
         "description": "Kaufkonsum: Kauf nicht immer das modernste und neuste."
       },
       {
-        "title": "Schritt 10",
+        "title": "Nachhaltigkeit",
         "description": "Nachhaltigkeit: Nutze deine Kleidung so lange wie möglich."
       }
     ],
     "mobility": [
       {
-        "title": "Schritt 1",
+        "title": "Fliegen vermeiden",
         "description": "Fliegen vermeiden: Du willst in den Urlaub? Es gibt bestimmt Strecken, die du mit dem Zug fahren kannst. Flugzeuge schütten sehr viel CO2 aus."
       },
       {
-        "title": "Schritt 2",
+        "title": "Kreuzfahrten vermeiden",
         "description": "Kreuzfahrten vermeiden: Kreuzfahrten sind noch schädlicher, als Flugzeuge."
       },
       {
-        "title": "Schritt 3",
+        "title": "Buss / Bahn verwenden",
         "description": "Transportwesen: Nutze lieber den Zug/Bus, anstatt mit dem Auto zu fahren."
       },
       {
-        "title": "Schritt 4",
+        "title": "Verwendung vom Auto",
         "description": "Transportwesen: Verzichte doch bei kurzen Strecken auf das Auto."
       },
       {
-        "title": "Schritt 5",
+        "title": "Auto",
         "description": "Autos: Benutz dein Auto solange es geht."
       },
       {
-        "title": "Schritt 6",
+        "title": "Velo fahren",
         "description": "Transportwesen: Fahr öfters mit dem Velo."
       },
       {
-        "title": "Schritt 7",
+        "title": "Ökobilanz",
         "description": "Autos: Schaue, welche Autos die beste Ökobilanz haben, und nutze lieber diese."
       },
       {
-        "title": "Schritt 8",
+        "title": "Carsharing",
         "description": "Carsharing: Carsharing ist eine gute Lösung, ohne ein eigenes Auto unterwegs sein zu können."
       },
       {
-        "title": "Schritt 9",
+        "title": "E-Bikes",
         "description": "Transportwesen: Verzichte auf E-Bikes und nutze lieber ein normales Fahrrad."
       },
       {
-        "title": "Schritt 10",
+        "title": "Bikesharing",
         "description": "Bikesharing: Kein eigens Velo? Nutze doch Bikesharing-Services. Diese sind nicht so teuer und praktisch."
       }
     ],
     "food": [
       {
-        "title": "Schritt 1",
+        "title": "Fleischkonsum",
         "description": "Weniger Fleisch: Ein bis zweimal die Woche Fleisch sind mehr als genug. Viele essen täglich, das ist für unsern Körper und unsere Umwelt nicht gut."
       },
       {
-        "title": "Schritt 2",
+        "title": "Fischkonsum",
         "description": "Weniger Fisch: Das Meer hat einen sehr grossen Einfluss auf die Umwelt."
       },
       {
-        "title": "Schritt 3",
+        "title": "Einkauf",
         "description": "Einkauf: Nur das einkaufen, was man braucht."
       },
       {
-        "title": "Schritt 4",
+        "title": "Reste einfrieren",
         "description": "Reste einfrieren: Fleisch ist viel länger haltbar, wenn man es einfriert. Also, falls man zu viel hat, kann man auch welches einfrieren."
       },
       {
-        "title": "Schritt 5",
+        "title": "Haltbarkeitsdatum",
         "description": "Mindesthaltbarkeitsdatum: Abgelaufen heisst nicht unbrauchbar! Schaut, ob das Nahrungsmittel noch brauchbar ist, sonst kann man auch im Internet nachschlagen zur Hilfe."
       },
       {
-        "title": "Schritt 6",
+        "title": "Saisonal",
         "description": "Saisonal bleiben: Kauf saisonal, der Transportweg schüttet sehr viel CO2 aus."
       },
       {
-        "title": "Schritt 7",
+        "title": "Regional",
         "description": "Regional einkaufen: Wie beim Saisonalen, schüttet der Transportweg sehr viel CO2 aus."
       },
       {
-        "title": "Schritt 8",
+        "title": "Labels",
         "description": "Labels: Achtet auf Labels, diese können auf weiteres hinweisen."
       },
       {
-        "title": "Schritt 9",
+        "title": "Leitungswasser",
         "description": "Wasser: Leitungswasser anstatt Mineralwasser. Es gibt genug alternative Möglichkeiten, um Wasser mit Kohlensäure zu trinken."
       },
       {
-        "title": "Schritt 10",
+        "title": "Abfall",
         "description": "Wegwerfen: Wirf nicht alles weg, was du nicht mehr isst. Evtl. kann es der Nachbar noch brauchen."
       }
     ]

@@ -110,7 +110,7 @@ const Home: NextPage = () => {
             }}
           ></StoryButton>
         </div>
-        <h1 className="col-start-2 col-span-3 text-center text-6xl transition-transform hover:scale-125 cursor-default">
+        <h1 className="col-start-2 col-span-3 text-center text-2xl md:text-6xl transition-transform hover:scale-125 cursor-default">
           Ernährung
         </h1>
         <div className="flex justify-center col-start-1">

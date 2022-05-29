@@ -66,3 +66,30 @@
   height: 2px !important;
   background: #cbb87f !important;
 }
+@media screen and (max-width: 550px) {
+  .nav,
+  .navbar {
+    width: 80% !important;
+    padding-left: 5px;
+  }
+
+  .nav .navItem,
+  .navbar .navItem {
+    font-size: 6px !important;
+  }
+}
+@media screen and (max-width: 350px) {
+  .navbarContainer {
+    height: 120px !important;
+  }
+
+  .nav,
+  .navbar {
+    flex-wrap: wrap !important;
+  }
+
+  .nav .navItem,
+  .navbar .navItem {
+    margin: 5px 5px !important;
+  }
+}

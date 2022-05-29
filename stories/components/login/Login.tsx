@@ -11,6 +11,7 @@ import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
+import { useRouter } from "next/router";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface LoginProps {
@@ -23,6 +24,7 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
   const [getEmail, setEmail] = useState(String);
   const [getPassword, setPassword] = useState(String);
   const [getPasswordConfirm, setPasswordConfirm] = useState(String);
+  const router = useRouter();
   const toggleSignup = (): void => {
     setToggled((prev) => !prev);
     onSwitch && onSwitch();
@@ -30,6 +32,7 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
   const loginGoogle = (): void => {
     signInWithRedirect(auth, provider).then(() => {
       setPersistence(auth, browserLocalPersistence);
+      router.replace("/");
     });
   };
   const forgotPassword = (): void => {
@@ -45,6 +48,7 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
     signInWithEmailAndPassword(auth, getEmail, getPassword)
       .then((): void => {
         setPersistence(auth, browserLocalPersistence);
+        router.replace("/");
       })
       .catch((error): void => {
         alert(error.message);
@@ -54,6 +58,7 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
     createUserWithEmailAndPassword(auth, getEmail, getPassword)
       .then((): void => {
         setPersistence(auth, browserLocalPersistence);
+        router.replace("/");
       })
       .catch((error): void => {
         alert(error.message);
@@ -122,7 +127,14 @@ export const Login = ({ toggled = false, onSwitch }: LoginProps) => {
           <h2 className={styles.title}>Zeit etwas zu verändern!</h2>
           <label className={styles.label}>
             <span>Email</span>
-            <input type="email" className={styles.input} />
+            <input
+              value={getEmail}
+              onChange={(event): void => {
+                setEmail(event.currentTarget.value);
+              }}
+              type="email"
+              className={styles.input}
+            />
           </label>
           <label className={styles.label}>
             <span>Passwort</span>

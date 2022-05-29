@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   React.useEffect((): void => {
     setPersistence(auth, browserLocalPersistence).then((): void => {
       if (!auth.currentUser) {
-        router.push("/login");
+        router.replace("/login");
       }
     });
   });
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
             }}
           ></StoryButton>
         </div>
-        <h1 className="col-start-2 col-span-3 text-center text-6xl transition-transform hover:scale-125 cursor-default">
+        <h1 className="col-start-2 col-span-3 text-center text-2xl md:text-6xl transition-transform hover:scale-125 cursor-default">
           Klimaneutral
         </h1>
         <div className="flex justify-center col-span-5 h-[68px]"></div>

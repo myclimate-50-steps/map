@@ -11,6 +11,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
+import { useRouter } from "next/router";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface LoginMobileProps {
@@ -26,6 +27,7 @@ export const LoginMobile = ({
   const [getEmail, setEmail] = useState(String);
   const [getPassword, setPassword] = useState(String);
   const [getPasswordConfirm, setPasswordConfirm] = useState(String);
+  const router = useRouter();
   const toggleSignup = (): void => {
     setToggled((prev) => !prev);
     onSwitch && onSwitch();
@@ -33,6 +35,7 @@ export const LoginMobile = ({
   const loginGoogle = (): void => {
     signInWithRedirect(auth, provider).then(() => {
       setPersistence(auth, browserLocalPersistence);
+      router.replace("/");
     });
   };
   const forgotPassword = (): void => {
@@ -48,6 +51,7 @@ export const LoginMobile = ({
     signInWithEmailAndPassword(auth, getEmail, getPassword)
       .then((): void => {
         setPersistence(auth, browserLocalPersistence);
+        router.replace("/");
       })
       .catch((error): void => {
         alert(error.message);
@@ -57,6 +61,7 @@ export const LoginMobile = ({
     createUserWithEmailAndPassword(auth, getEmail, getPassword)
       .then((): void => {
         setPersistence(auth, browserLocalPersistence);
+        router.replace("/");
       })
       .catch((error): void => {
         alert(error.message);
