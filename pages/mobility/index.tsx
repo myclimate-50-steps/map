@@ -44,10 +44,10 @@ const Home: NextPage = () => {
         }container max-w-2xl flex flex-col justify-center`}
       >
         <h1 className="text-6xl text-center mb-6">
-          {steps.categories.clothing[currentActive].title}
+          {steps.categories.mobility[currentActive].title}
         </h1>
         <p className="text-lg text-center break-words">
-          {steps.categories.clothing[currentActive].description}
+          {steps.categories.mobility[currentActive].description}
         </p>
       </div>
       <div
